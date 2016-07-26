@@ -1,0 +1,19 @@
+1	000000	.234567890123456789
+2	000000	jk        start   33
+3	000033	aaa      resw    1
+4	000036	bbb      resb    4096
+5	001036	ccc      equ     *
+6	001036	ddd      equ     aaa-bbb
+7	001036	eee      equ     ddd+10
+8	001036	word      10,12,51
+9	00103F	end
+****	**********End of pass 1***********
+****		ccc                 001036    realocatable   
+****		ddd                 fffffd    absolute       
+****		bbb                 000036    realocatable   
+****		eee                 000007    absolute       
+****		aaa                 000033    realocatable   
+
+************* 	pass 2 report *************
+
+

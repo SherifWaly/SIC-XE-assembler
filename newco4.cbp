@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="assembler" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../sica_build/bin/assembler" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../sica_build/obj/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="sicCode.txt" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/newco4" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="OpTable.txt" />
+		<Unit filename="directives.txt" />
+		<Unit filename="include/AssemblerUtalities.h" />
+		<Unit filename="include/DirectivseTable.h" />
+		<Unit filename="include/FixedFormatReader.h" />
+		<Unit filename="include/FreeFormatReader.h" />
+		<Unit filename="include/Includes.h">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="include/InputReader.h" />
+		<Unit filename="include/IntermediateReader.h" />
+		<Unit filename="include/LiteralPool.h" />
+		<Unit filename="include/ObjectWriter.h" />
+		<Unit filename="include/OpTable.h" />
+		<Unit filename="include/OperandValidator.h" />
+		<Unit filename="include/PassOne.h" />
+		<Unit filename="include/PassTwo.h" />
+		<Unit filename="include/SymTable.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="out.txt">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="sicCode.txt">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="sicCode.txt_list.txt" />
+		<Unit filename="sicCode.txt_output.txt" />
+		<Unit filename="src/AssemblerUtalities.cpp" />
+		<Unit filename="src/DirectivseTable.cpp" />
+		<Unit filename="src/FixedFormatReader.cpp" />
+		<Unit filename="src/FreeFormatReader.cpp" />
+		<Unit filename="src/InputReader.cpp" />
+		<Unit filename="src/IntermediateReader.cpp" />
+		<Unit filename="src/LiteralPool.cpp" />
+		<Unit filename="src/ObjectWriter.cpp" />
+		<Unit filename="src/OpTable.cpp" />
+		<Unit filename="src/OperandValidator.cpp">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="src/PassOne.cpp" />
+		<Unit filename="src/PassTwo.cpp" />
+		<Unit filename="src/SymTable.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

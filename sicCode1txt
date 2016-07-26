@@ -1,0 +1,125 @@
+.23456789012345670
+caps     START   0
+         LDA     #STR
+         STA     ARG1
+         LDA     #LEN
+         STA     LEN1
+         JSUB    SSCAN
+.
+         LDA     #STR
+         STA     ARG2
+         LDT     LEN
+         STT     LEN2
+         JSUB    REVERSE
+.
+         LDX     #0
+CAPLOOP  LDA     #STR
+         ADDR    X,A
+         STA     ARG3
+         JSUB    TOCAP
+         TIX     LEN
+         JLT     CAPLOOP
+         LDA     #STR
+         STA     ARG0
+         LDT     LEN
+         JSUB    PRNT
+EXIT     J       EXIT
+LEN      RESW    1
+STR      RESB    2000
+.
+.
+. subroutines
+.
+. print string to output device
+.
+PRNT     LDX     #0
+TESTOUT  TD      OUTDEV
+         JEQ     PRNT
+         LDCH    @ARG0
+         WD      OUTDEV
+         LDA     #1
+         ADD     ARG0
+         STA     ARG0
+         TIXR    T
+         JLT     TESTOUT
+         RSUB
+ARG0     RESW    1
+OUTDEV   BYTE    X'04'
+.
+. read string from input device
+.
+SSCAN    LDX     #0
+         LDT     #1
+         LDA     #0
+         LDS     ARG1
+TESTIN   TD      INDEV
+         JEQ     TESTIN
+         RD      INDEV
+.
+         COMP    EOL
+         JEQ     ENDIN
+         COMP    EOF
+         JEQ     ENDIN
+.
+         STCH    @ARG1
+         ADDR    T,X
+         ADDR    T,S
+         STS     ARG1
+         J       TESTIN
+ENDIN    STX     @LEN1
+         RSUB
+INDEV    BYTE    X'F1'
+EOL      WORD    10
+EOF      WORD    0
+ARG1     RESW    1
+LEN1     RESW    1
+.
+.
+. reverse string in-place
+.
+REVERSE  LDX     ARG2
+         LDT     LEN
+         ADDR    X,T
+         NOBASE
+         LDB     #1
+         SUBR    B,T
+         STT     LEFT
+REVLOOP  LDCH    @ARG2
+         RMO     A,S
+         LDCH    @LEFT
+         STCH    @ARG2
+         RMO     S,A
+         STCH    @LEFT
+         ADDR    B,X
+         SUBR    B,T
+         COMPR   X,T
+         STX     ARG2
+         STT     LEFT
+         JLT     REVLOOP
+         RSUB
+ARG2     RESW    1
+LEFT     RESW    1
+LEN2     RESW    1
+.
+. convert to upper case
+.
+TOCAP    LDA     #0
+         LDCH    @ARG3
+         RMO     A,S
+         LDCH    ASMALL
+         SUBR    A,S
+         LDT     #0
+         COMPR   S,T
+         JLT     ENDCAP
+         LDT     #26
+         COMPR   S,T
+         JGT     ENDCAP
+         LDCH    ACAP
+         ADDR    S,A
+         STCH    @ARG3
+ENDCAP   RSUB
+ARG3     RESW    1
+ASMALL   BYTE    C'a'
+ACAP     BYTE    C'A'
+.
+         END     caps

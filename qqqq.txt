@@ -1,0 +1,15 @@
+.23456789012345678901234567890123456
+.Label.  Opcode  The  O p e r a n d 
+.   
+         START   1000
+BGN      LDA     #5 
+         STA     ALPHA
+         LDCH    #90
+aaa      equ     bgn+12     
+         STCH    C1
+         J       *
+.
+ALPHA    RESW    1
+xxx      equ     alpha-aaa 
+C1       RESB    1
+         END     BGN 

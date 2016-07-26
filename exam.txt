@@ -1,0 +1,9 @@
+.234567890123456789
+         start   33
+aaa      resw    1
+bbb      resb    4096
+ccc      equ     *
+ddd      equ     ccc-bbb
+eee      equ     ddd+10
+         end
+  

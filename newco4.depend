@@ -1,0 +1,115 @@
+# depslib dependency file v1.0
+1462821703 source:c:\users\sherief-pc\desktop\sica\src\assemblerutalities.cpp
+	"AssemblerUtalities.h"
+
+1462821703 c:\users\sherief-pc\desktop\sica\include\assemblerutalities.h
+	"Includes.h"
+
+1462821686 c:\users\sherief-pc\desktop\sica\include\includes.h
+	<bits/stdc++.h>
+	<regex>
+
+1462821686 source:c:\users\sherief-pc\desktop\sica\src\directivsetable.cpp
+	"DirectivseTable.h"
+
+1462821686 c:\users\sherief-pc\desktop\sica\include\directivsetable.h
+	"Includes.h"
+
+1462821686 source:c:\users\sherief-pc\desktop\sica\src\fixedformatreader.cpp
+	"FixedFormatReader.h"
+
+1462821686 c:\users\sherief-pc\desktop\sica\include\fixedformatreader.h
+	"Includes.h"
+	"InputReader.h"
+
+1462821686 c:\users\sherief-pc\desktop\sica\include\inputreader.h
+	"Includes.h"
+	"AssemblerUtalities.h"
+	"OperandValidator.h"
+
+1462911118 c:\users\sherief-pc\desktop\sica\include\operandvalidator.h
+	"Includes.h"
+	"SymTable.h"
+	"AssemblerUtalities.h"
+
+1462821703 c:\users\sherief-pc\desktop\sica\include\symtable.h
+	"Includes.h"
+	"AssemblerUtalities.h"
+
+1462821686 source:c:\users\sherief-pc\desktop\sica\src\freeformatreader.cpp
+	"FreeFormatReader.h"
+	"Includes.h"
+	"OpTable.h"
+	"DirectivseTable.h"
+
+1462821686 c:\users\sherief-pc\desktop\sica\include\freeformatreader.h
+	"InputReader.h"
+
+1462821686 c:\users\sherief-pc\desktop\sica\include\optable.h
+	"Includes.h"
+
+1462821703 source:c:\users\sherief-pc\desktop\sica\src\inputreader.cpp
+	"InputReader.h"
+
+1462821686 source:c:\users\sherief-pc\desktop\sica\src\intermediatereader.cpp
+	"IntermediateReader.h"
+
+1462821703 c:\users\sherief-pc\desktop\sica\include\intermediatereader.h
+	"FreeFormatReader.h"
+
+1462914638 source:c:\users\sherief-pc\desktop\sica\src\objectwriter.cpp
+	"ObjectWriter.h"
+
+1462821703 c:\users\sherief-pc\desktop\sica\include\objectwriter.h
+	"Includes.h"
+	"AssemblerUtalities.h"
+
+1462821686 source:c:\users\sherief-pc\desktop\sica\src\optable.cpp
+	"OpTable.h"
+
+1462821703 source:c:\users\sherief-pc\desktop\sica\src\symtable.cpp
+	"SymTable.h"
+
+1462911118 source:c:\users\sherief-pc\desktop\sica\src\operandvalidator.cpp
+	"OperandValidator.h"
+
+1462911118 source:c:\users\sherief-pc\desktop\sica\main.cpp
+	<getopt.h>
+	<PassOne.h>
+	<FixedFormatReader.h>
+	<Includes.h>
+	"PassTwo.h"
+
+1462830892 c:\users\sherief-pc\desktop\sica\include\passone.h
+	"Includes.h"
+	"InputReader.h"
+	"FreeFormatReader.h"
+	"FixedFormatReader.h"
+	"OpTable.h"
+	"DirectivseTable.h"
+	"SymTable.h"
+	"LiteralPool.h"
+	"OperandValidator.h"
+
+1462911118 c:\users\sherief-pc\desktop\sica\include\literalpool.h
+	"Includes.h"
+
+1462911118 c:\users\sherief-pc\desktop\sica\include\passtwo.h
+	"Includes.h"
+	"OpTable.h"
+	"DirectivseTable.h"
+	"SymTable.h"
+	"InputReader.h"
+	"IntermediateReader.h"
+	"LiteralPool.h"
+	"ObjectWriter.h"
+
+1462911118 source:c:\users\sherief-pc\desktop\sica\src\literalpool.cpp
+	"LiteralPool.h"
+
+1462911118 source:c:\users\sherief-pc\desktop\sica\src\passone.cpp
+	"PassOne.h"
+
+1462914327 source:c:\users\sherief-pc\desktop\sica\src\passtwo.cpp
+	"PassTwo.h"
+
